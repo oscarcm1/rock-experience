@@ -1,0 +1,29 @@
+@use "../../styles/variables" as variables;
+
+
+
+.btn{
+    border-radius: variables.$border-radius;
+    padding: 10px 20px;
+    color: variables.$color-surface;
+    font-weight: bold;
+}
+
+.primary{
+    background-color: variables.$color-primary;
+
+    &:hover{
+        box-shadow: 2px 4px 8px rgba(201, 243, 13, 0.486);
+    }
+}
+
+.secondary{
+    border: 1px solid variables.$color-border;
+    color: variables.$color-text;
+
+     &:hover{
+        color: variables.$color-surface;
+        background-color: variables.$color-primary;
+        box-shadow: 2px 4px 8px rgba(201, 243, 13, 0.486);
+    }
+}

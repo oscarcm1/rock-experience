@@ -1,0 +1,17 @@
+@use "../../styles/variables" as variables;
+
+.social {
+    display: flex;
+    gap: 20px;
+
+
+    svg {
+        fill: white;
+        width: 1.6rem;
+        height: 1.6rem;
+
+        &:hover {
+            fill: variables.$color-primary;
+        }
+    }
+}

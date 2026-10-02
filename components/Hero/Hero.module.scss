@@ -1,0 +1,40 @@
+@use "../../styles/variables" as variables;
+
+
+.hero{
+    position: relative;
+    width: 100%;
+    margin-top: calc(variables.$header-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: auto;
+    padding: 40px 0;
+
+      @media (min-width: 768px) {
+        height: 500px;
+  }
+
+
+    h1{
+        text-align: center;
+        color: variables.$color-primary;
+        font-weight: bold;
+        font-size: clamp(2rem, 5vw, 4rem);
+    }
+
+    h2{
+        font-size: clamp(1.6rem, 4vw, 3rem);
+        max-width: 1200px;
+        text-wrap: balance;
+        text-align: center;
+    }
+
+    &__cta{
+        display: flex;
+        gap: 20px;
+    }
+
+}

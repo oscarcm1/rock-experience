@@ -1,0 +1,109 @@
+@use "../../styles/variables" as variables;
+
+
+.contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 60px;
+    padding: 80px 0;
+
+    @media (min-width: 768px) {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    &__text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid variables.$color-border;
+        border-radius: variables.$border-radius;
+
+        h2 {
+            text-align: center;
+            color: variables.$color-primary;
+            font-size: clamp(2rem, 5vw, 4rem);
+        }
+    }
+
+
+    &__form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border: 1px solid variables.$color-border;
+        padding: 20px;
+        border-radius: variables.$border-radius;
+
+        h2 {
+            font-weight: bold;
+            font-size: 2rem;
+            color: variables.$color-primary;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            label {
+                font-weight: bold;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                border-bottom: 1px solid #ccc;
+                font: inherit;
+            }
+
+            textarea {
+                resize: vertical;
+            }
+        }
+
+    }
+}
+
+
+.privacy {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    input {
+        width: auto;
+    }
+
+    label {
+        cursor: pointer;
+    }
+}
+
+.form button {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.confirmation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: variables.$color-primary;
+    color: variables.$color-surface;
+    font-weight: bold;
+    padding: 40px;
+
+    h2 {
+        font-size: 2.4rem;
+    }
+}
