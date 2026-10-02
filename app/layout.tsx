@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +12,29 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+
+const Sulphur_Point = localFont({
+  src: [
+    {
+      path: "./fonts/Sulphur_Point/SulphurPoint-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Sulphur_Point/SulphurPoint-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Sulphur_Point/SulphurPoint-Bold.ttf",
+      weight: "bold",
+      style: "normal",
+    },
+  ],
+  variable: "--font-sulphur-point",
+});
+
 
 
 export const metadata: Metadata = {
@@ -36,10 +60,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="es"
+      className={`${Sulphur_Point.variable} ${geistSans.variable} ${geistMono.variable}`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
