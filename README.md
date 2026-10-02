@@ -171,7 +171,14 @@ Explica cómo solucionarías cada problema.
 ## Soluciones
 * No existe un form para el formulario debe existis un <form>  </form>
 * El div deberia ser un tipo <button>
-* El input del email debe ser type=”email” y no hay name=”email” ni required, no existe   parametros de entrada minimos y maximos y no hay validaciones.
+* El input del email debe ser type=”email” y no hay name=”email” ni required, falta un label
+* no existen parametros de entrada minimos y maximos y no hay validaciones.
 * Falta el Content-type en los headers
 * No hay UX, no existe un mensaje de Enviando… o si de algo salio mal
+* Falta "use client" -> cuando se usa UseState es un Clien Component
+* NO hay manejo de errores try catch, siempre responderá Mensaje enviado
+* La api es pública, deberia estar en las variables de entorno
+* alert no es UX usaria una libreria tipo SweetAlert o un mensaje dentro de la interfaz del form
+
+
 
