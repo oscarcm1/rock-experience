@@ -5,6 +5,7 @@ interface ButtonProps {
   href?: string;
   variant?: "primary" | "secondary" | "cta" ;
   type?: "button" | "submit" | "reset";
+  onClick?: () => void;
 }
 
 export default function Button({
@@ -12,19 +13,20 @@ export default function Button({
   href,
   variant = "primary",
   type = "button",
+  onClick,
 }: ButtonProps) {
   const className = `${styles.btn} ${styles[variant]}`;
 
   if (href) {
     return (
-      <a href={href} className={className}>
+      <a href={href} className={className} onClick={onClick}>
         {children}
       </a>
     );
   }
 
   return (
-    <button type={type} className={className}>
+    <button type={type} className={className} onClick={onClick}>
       {children}
     </button>
   );
