@@ -4,6 +4,7 @@ import styles from "./Hero.module.scss"
 export default function Hero() {
   return (
     <section className={styles.hero}>
+        <div className={styles.bubble}></div>
         <h1>Vive algo diferente</h1>
         <h2>Descubre experiencias creadas para conectar marcas, tecnología y personas.</h2>
         <div className={styles.hero__cta}>
