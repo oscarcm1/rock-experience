@@ -1,0 +1,63 @@
+@use "../../styles/variables" as variables;
+
+.experience {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: stretch;
+    gap: 20px;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1200px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    position: relative;
+    border-radius: variables.$border-radius ;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid variables.$color-border;
+
+    img {
+        filter: grayscale(.4);
+
+        &:hover {
+            filter: grayscale(0);
+            filter: brightness(1.1);
+            transition: ease-in 200ms;
+            scale: 1.1;
+        }
+    }
+
+    h3 {
+        font-weight: bold;
+    }
+
+    &__text {
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        span {
+            width: 100%;
+            background-color: variables.$color-primary;
+            color: variables.$color-surface;
+            letter-spacing: .2rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+    }
+}
