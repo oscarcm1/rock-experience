@@ -8,8 +8,8 @@ export default function Hero() {
         <h1>Vive algo diferente</h1>
         <h2>Descubre experiencias creadas para conectar marcas, tecnología y personas.</h2>
         <div className={styles.hero__cta}>
-          <Button  href="" variant="primary">Explorar experiencias</Button>
-          <Button  href="" variant="secondary" >Quiero participar</Button>
+          <Button  href="#experiencias" variant="primary">Explorar experiencias</Button>
+          <Button  href="#contacto" variant="secondary" >Quiero participar</Button>
         </div>
     </section>
   )
