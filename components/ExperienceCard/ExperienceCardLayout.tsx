@@ -1,8 +1,10 @@
-import experiences from "@/data/experiences.json";
 import ExperienceCard from "./ExperienceCard";
 import styles from "./ExperienceCard.module.scss";
+import { getExperiences } from "./ExperienceData";
 
-export default function ExperienceCardLayout() {
+export default async function ExperienceCardLayout() {
+  const experiences = await getExperiences();
+
   if (!experiences || experiences.length === 0) {
     return null;
   }

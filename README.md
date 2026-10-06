@@ -54,6 +54,10 @@ Instalar las dependencias:
 npm install
 ```
 
+Crear el archivo .env.local con los siguentes valores
+
+  Local:  SITE_URL=http://localhost:3000
+
 Ejecutar el proyecto en desarrollo:
 
 ```bash
