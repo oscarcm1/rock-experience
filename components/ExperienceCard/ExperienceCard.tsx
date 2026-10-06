@@ -1,13 +1,6 @@
 import Image from "next/image";
 import styles from "./ExperienceCard.module.scss";
-
-interface Experience {
-  id: number;
-  title: string;
-  category: string;
-  description: string;
-  image: string;
-}
+import { Experience } from "@/types/experience";
 
 interface ExperienceCardProps {
   experience: Experience;
@@ -16,6 +9,7 @@ interface ExperienceCardProps {
 export default function ExperienceCard({
   experience,
 }: ExperienceCardProps) {
+
   return (
     <article className={styles.card}>
       <picture className={styles.imageWrapper}>
